@@ -23,6 +23,18 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  config.view = {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.tpl': 'nunjucks',
+    },
+  };
+
+  config.news = {
+    pageSize: 5,
+    serverUrl: 'https://hacker-news.firebaseio.com/v0',
+  };
+
   return {
     ...config,
     ...userConfig,
